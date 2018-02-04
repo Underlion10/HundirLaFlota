@@ -1,6 +1,7 @@
 package ventana;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -33,6 +34,7 @@ public class Ventana extends JFrame{
 		setResizable(false);
 		Container cn = getContentPane();
 		JPanel cp = new JPanel();
+		cp.setBackground(new Color(45,170,90));
 		cp.setLayout(new FlowLayout());
 		JLabel label = new JLabel("Introduce una coordenada: ");
 		JTextField campoX = new JTextField(1);
@@ -46,7 +48,6 @@ public class Ventana extends JFrame{
 		JPanel db = new JPanel();
 		db.setLayout(new GridLayout());
 		db.add(new Lienzo());
-		db.add(cp);
 		cn.add(cp, BorderLayout.NORTH);
 		cn.add(db, BorderLayout.CENTER);
 		cn.repaint();
